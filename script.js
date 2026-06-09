@@ -251,40 +251,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- 6. Scroll-spy & Active Section Links ---
-  const scrollspyObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.getAttribute("id");
-          
-          navLinks.forEach((link) => {
-            if (link.getAttribute("href") === `#${sectionId}`) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
+  const handleScrollspy = () => {
+    let currentSectionId = "";
+    const scrollPos = window.scrollY + 160;
+    
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute("id");
+      }
+    });
 
-          drawerLinks.forEach((link) => {
-            if (link.getAttribute("href") === `#${sectionId}`) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
+    if (currentSectionId) {
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === `#${currentSectionId}`) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
         }
       });
-    },
-    {
-      root: null,
-      threshold: 0.2,
-      rootMargin: "-15% 0px -40% 0px",
-    }
-  );
 
-  sections.forEach((section) => {
-    scrollspyObserver.observe(section);
-  });
+      drawerLinks.forEach((link) => {
+        if (link.getAttribute("href") === `#${currentSectionId}`) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    }
+  };
+  window.addEventListener("scroll", handleScrollspy);
+  handleScrollspy();
 
   // --- 7. Animating Skill Bars on Scroll ---
   const skillBars = document.querySelectorAll(".skill-progress-bar");
@@ -513,4 +511,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1500);
     });
   }
+
+  // --- 12. Bento Card Spotlight Glow Effect ---
+  const bentoCards = document.querySelectorAll(".bento-card");
+  bentoCards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    });
+  });
+
+  // --- 13. Real-Time Clock Display ---
+  const clockElement = document.getElementById("hero-time");
+  const updateClock = () => {
+    if (!clockElement) return;
+    const now = new Date();
+    const options = {
+      timeZone: "Asia/Karachi",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    };
+    const formatter = new Intl.DateTimeFormat("en-US", options);
+    clockElement.textContent = formatter.format(now);
+  };
+  setInterval(updateClock, 1000);
+  updateClock();
 });

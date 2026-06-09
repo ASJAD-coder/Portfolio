@@ -28,7 +28,7 @@
       <button id="theme-toggle-btn" class="theme-panel-toggle" aria-label="Toggle themes panel">
         <i class="bx bx-cog"></i>
       </button>
-      <div class="theme-panel glass-card">
+      <div class="theme-panel bento-card">
         <h3><i class="bx bx-palette"></i> Customize Theme</h3>
         
         <div class="theme-group">
@@ -78,7 +78,7 @@
     </header>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="nav-drawer" class="nav-drawer glass-card">
+    <div id="nav-drawer" class="nav-drawer bento-card">
       <a href="#home" class="active"><i class="bx bx-home-alt"></i> Home</a>
       <a href="#about"><i class="bx bx-user"></i> About</a>
       <a href="#services"><i class="bx bx-cog"></i> Services</a>
@@ -93,31 +93,69 @@
       <!-- Interactive Neural Net Particles Canvas -->
       <canvas id="hero-canvas" class="hero-canvas"></canvas>
 
-      <div class="home-content">
-        <div class="cyber-badge">SYSTEM STABLE // ONLINE</div>
-        <h1>Hi, I'm <span class="highlight glow-text">Asjad Sajjad</span></h1>
-        <h3>
-          I specialize in&nbsp;<span id="typewriter-text" class="typed-text"></span><span class="cursor-blink"></span>
-        </h3>
-        <p>
-          A computer science engineering student from Government College University Lahore. Crafting bleeding-edge digital solutions, compiling automation pipelines, and resolving code anomalies.
-        </p>
-        
-        <div class="btn-box">
-          <a href="#contact" class="btn btn-primary">HIRE ASJAD</a>
-          <a href="#projects" class="btn btn-secondary">PROJECT MATRIX</a>
+      <div class="hero-grid">
+        <!-- Bento Card 1: Intro -->
+        <div class="bento-card hero-intro reveal-left">
+          <div class="cyber-badge">SYSTEM STABLE // ONLINE</div>
+          <h1>Hi, I'm <span class="highlight glow-text">Asjad Sajjad</span></h1>
+          <h3>I specialize in&nbsp;<span id="typewriter-text" class="typed-text"></span><span class="cursor-blink"></span></h3>
+          <p>
+            Computer Science student at Government College University Lahore. Crafting bleeding-edge digital solutions, compiling automation pipelines, and engineering intelligent software systems.
+          </p>
+          <div class="btn-box">
+            <a href="#contact" class="btn btn-primary">HIRE ASJAD</a>
+            <a href="#projects" class="btn btn-secondary">PROJECT MATRIX</a>
+          </div>
         </div>
 
-        <div class="home-sci">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="bx bxl-github"></i></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile"><i class="bx bxl-twitter"></i></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile"><i class="bx bxl-instagram"></i></a>
+        <!-- Bento Card 2: Profile Picture -->
+        <div class="bento-card hero-profile reveal-right">
+          <div class="profile-img-wrapper">
+            <img src="ZOO.png" alt="Asjad Sajjad Profile Picture" />
+          </div>
         </div>
-      </div>
 
-      <div class="home-img-container">
-        <img src="ZOO.png" alt="Asjad Sajjad Profile Picture" />
+        <!-- Bento Card 3: Clock & Availability -->
+        <div class="bento-card hero-status reveal">
+          <div class="status-content">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for Freelance & Internships</span>
+          </div>
+          <div class="clock-display">
+            <div id="hero-time" class="time-text">00:00:00</div>
+            <div class="time-label">Lahore, PK (GMT+5)</div>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: Quick Stats -->
+        <div class="bento-card hero-stats reveal">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-num glow-text">3+</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num glow-text">15+</span>
+              <span class="stat-label">Projects Finished</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 5: Social Connections -->
+        <div class="bento-card hero-socials reveal">
+          <h3>Connect with me</h3>
+          <div class="home-sci">
+            <a href="https://www.linkedin.com/in/asjadhere?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/ASJAD-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="bx bxl-github"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.fiverr.com/s/pd7y9QN?utm_source=CopyLink_Mobile" target="_blank" rel="noopener noreferrer" aria-label="Fiverr Profile" style="display: inline-flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 508.02 508.02" width="18" height="18" fill="currentColor" style="display: block;">
+                <circle cx="315.97" cy="162.19" r="26.87"/>
+                <path d="M345.87,207.66h-123V199.6c0-15.83,15.83-16.13,23.89-16.13,9.25,0,13.44.9,13.44.9v-43.6a155.21,155.21,0,0,0-19.71-1.19c-25.68,0-73.16,7.16-73.16,61.51V208h-22.4v40.31h22.4v85.1h-20.9v40.31H247.34V333.37H222.85v-85.1H290v85.1H269.13v40.31h97.65V333.37H345.87Z" transform="translate(-1.83 -0.98)"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -152,35 +190,35 @@
       
       <div class="services-grid">
         <!-- Service 1: Chat Bots -->
-        <div class="services-card glass-card reveal">
+        <div class="services-card bento-card reveal">
           <div class="services-icon"><i class="bx bx-bot"></i></div>
           <h3>AI Chat Bots</h3>
           <p>Engineering smart, context-aware conversational bots, large language model prompt designs, semantic document search integration, and automated messaging agents across Discord, Slack, or Web platforms.</p>
         </div>
 
         <!-- Service 2: Web Dev -->
-        <div class="services-card glass-card reveal">
+        <div class="services-card bento-card reveal">
           <div class="services-icon"><i class="bx bx-code-block"></i></div>
           <h3>Web Development</h3>
           <p>Architecting full-stack responsive web apps using modern techniques. Specializing in sleek glassmorphic UI elements, dynamic dashboards, and high-performance state management systems.</p>
         </div>
 
         <!-- Service 3: App Dev -->
-        <div class="services-card glass-card reveal">
+        <div class="services-card bento-card reveal">
           <div class="services-icon"><i class="bx bx-mobile-alt"></i></div>
           <h3>App Development</h3>
           <p>Designing and compiling sleek, responsive cross-platform mobile apps for iOS and Android, focusing on intuitive UX navigation pathways, biometric integration, and local database synchronizations.</p>
         </div>
 
         <!-- Service 4: Web Scraping -->
-        <div class="services-card glass-card reveal">
+        <div class="services-card bento-card reveal">
           <div class="services-icon"><i class="bx bx-file-find"></i></div>
           <h3>Web Scraping</h3>
           <p>Constructing high-volume concurrent web spiders and crawling scripts to mine unstructured digital assets, parsing complicated DOM networks, and compiling organized JSON/Excel datasets.</p>
         </div>
 
         <!-- Service 5: Bug Fixing -->
-        <div class="services-card glass-card reveal">
+        <div class="services-card bento-card reveal">
           <div class="services-icon"><i class="bx bx-bug-alt"></i></div>
           <h3>Bug Fixing</h3>
           <p>Troubleshooting complex logic anomalies, memory leaks, performance bottlenecks, visual reflow flaws, and visual alignment bugs across codebases to optimize stability.</p>
@@ -199,7 +237,7 @@
 
           <div class="education-box">
             <div class="education-content">
-              <div class="content glass-card">
+              <div class="content bento-card">
                 <div class="year"><i class="bx bx-calendar"></i>2024 - 2028</div>
                 <h3>Bachelors in Computer Science</h3>
                 <p><strong>Government College University Lahore</strong></p>
@@ -208,7 +246,7 @@
             </div>
 
             <div class="education-content">
-              <div class="content glass-card">
+              <div class="content bento-card">
                 <div class="year"><i class="bx bx-calendar"></i>2021 - 2023</div>
                 <h3>Intermediate in Computer Science (ICS)</h3>
                 <p><strong>Punjab Group of Colleges</strong></p>
@@ -217,7 +255,7 @@
             </div>
 
             <div class="education-content">
-              <div class="content glass-card">
+              <div class="content bento-card">
                 <div class="year"><i class="bx bx-calendar"></i>2019 - 2021</div>
                 <h3>Matriculation with Science</h3>
                 <p><strong>Al-Fareed High School</strong></p>
@@ -233,7 +271,7 @@
 
           <div class="education-box">
             <div class="education-content">
-              <div class="content glass-card">
+              <div class="content bento-card">
                 <div class="year"><i class="bx bx-calendar"></i>2024 - Present</div>
                 <h3>Freelance Full-Stack Developer</h3>
                 <p><strong>Self-Employed</strong></p>
@@ -242,7 +280,7 @@
             </div>
 
             <div class="education-content">
-              <div class="content glass-card">
+              <div class="content bento-card">
                 <div class="year"><i class="bx bx-calendar"></i>2023 - 2024</div>
                 <h3>Frontend Development Intern</h3>
                 <p><strong>PixelCrafters Studios</strong></p>
@@ -251,7 +289,7 @@
             </div>
 
             <div class="education-content">
-              <div class="content glass-card">
+              <div class="content bento-card">
                 <div class="year"><i class="bx bx-calendar"></i>2022 - 2023</div>
                 <h3>Open Source Developer</h3>
                 <p><strong>GCU Tech Society</strong></p>
@@ -271,7 +309,7 @@
         <!-- Technical Programming Skills -->
         <div class="skills-column reveal-left">
           <h3 class="title"><i class="bx bx-code"></i> Coding Competency</h3>
-          <div class="skills-box glass-card">
+          <div class="skills-box bento-card">
             <div class="skills-content">
               <div class="progress">
                 <h3>HTML <span>90%</span></h3>
@@ -296,7 +334,7 @@
         <!-- Professional Competency -->
         <div class="skills-column reveal-right">
           <h3 class="title"><i class="bx bx-award"></i> Professional Skills</h3>
-          <div class="skills-box glass-card">
+          <div class="skills-box bento-card">
             <div class="skills-content">
               <div class="progress">
                 <h3>Web Application Design <span>95%</span></h3>
@@ -337,7 +375,7 @@
       <!-- Projects Grid -->
       <div class="projects-grid">
         <!-- Project 1: Web Dev -->
-        <div class="project-card glass-card show reveal" data-category="web">
+        <div class="project-card bento-card show reveal" data-category="web">
           <div class="project-card-img">
             <img src="./webdev_project.png" alt="SaaS Web Application Dashboard Mockup" />
           </div>
@@ -355,7 +393,7 @@
         </div>
 
         <!-- Project 2: AI Chatbot -->
-        <div class="project-card glass-card show reveal" data-category="chatbot">
+        <div class="project-card bento-card show reveal" data-category="chatbot">
           <div class="project-card-img">
             <img src="./chatbot_project.png" alt="Futuristic AI Chatbot interface dashboard" />
           </div>
@@ -373,7 +411,7 @@
         </div>
 
         <!-- Project 3: App Dev -->
-        <div class="project-card glass-card show reveal" data-category="app">
+        <div class="project-card bento-card show reveal" data-category="app">
           <div class="project-card-img">
             <img src="./appdev_project.png" alt="Futuristic mobile bank app UI mockups" />
           </div>
@@ -391,7 +429,7 @@
         </div>
 
         <!-- Project 4: Web Scraping -->
-        <div class="project-card glass-card show reveal" data-category="scraping">
+        <div class="project-card bento-card show reveal" data-category="scraping">
           <div class="project-card-img">
             <img src="./scraping_project.png" alt="Cyberpunk Tech background showing web crawling data nodes" />
           </div>
@@ -409,7 +447,7 @@
         </div>
 
         <!-- Project 5: Bug Fixing -->
-        <div class="project-card glass-card show reveal" data-category="debug">
+        <div class="project-card bento-card show reveal" data-category="debug">
           <div class="project-card-img">
             <img src="./bugfixing_project.png" alt="Debugging code in futuristic editor screen layout" />
           </div>
@@ -440,9 +478,9 @@
           </p>
           
           <div class="contact-methods">
-            <a href="mailto:asjad@gcu.edu.pk" class="contact-method-item">
+            <a href="mailto:asjadsajjadpc@gmail.com" class="contact-method-item">
               <i class="bx bx-envelope"></i>
-              <span>asjad@gcu.edu.pk</span>
+              <span>asjadsajjadpc@gmail.com</span>
             </a>
             <div class="contact-method-item">
               <i class="bx bx-map"></i>
@@ -452,7 +490,7 @@
         </div>
 
         <!-- Right Panel: Ultra-Clean Frosted Form Card -->
-        <div class="contact-right-card glass-card reveal-right">
+        <div class="contact-right-card bento-card reveal-right">
           <form id="contact-form" autocomplete="off" onsubmit="return false;">
             <div class="input-field">
               <input type="text" id="form-name" placeholder=" " required />
@@ -489,7 +527,7 @@
 
     <!-- Project Details Fullscreen Modal -->
     <div id="project-modal" class="modal">
-      <div class="modal-content glass-card">
+      <div class="modal-content bento-card">
         <button id="modal-close-btn" class="modal-close" aria-label="Close Project Modal">
           <i class="bx bx-x"></i>
         </button>
